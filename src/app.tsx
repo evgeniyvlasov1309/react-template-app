@@ -1,13 +1,16 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import { Test } from './components/test'
 
 export function App(props: any) {
+    const [state, setState] = useState(0)
+
     useEffect(() => {
-        console.log('test')
+        console.log('test', state)
     }, [])
 
     return (
         <div>
-            React App <br />
+            <Test />
         </div>
     )
 }
